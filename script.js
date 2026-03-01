@@ -51,8 +51,10 @@ document.addEventListener('DOMContentLoaded', () => {
     'phone--pos-1': { hidden: 'translateY(40px) rotate(-2.5deg)' },
     'phone--pos-2': { hidden: 'translateY(0px) rotate(-0.5deg)' },
     'phone--pos-3': { hidden: 'translateY(60px) rotate(0.5deg)' },
-    'phone--pos-4': { hidden: 'translateY(36px) rotate(0.5deg)' },
-    'phone--pos-5': { hidden: 'translateY(68px) rotate(2.5deg)' },
+    'phone--pos-4': { hidden: 'translateY(36px) rotate(-0.5deg)' },
+    'phone--pos-5': { hidden: 'translateY(56px) rotate(0.5deg)' },
+    'phone--pos-6': { hidden: 'translateY(72px) rotate(1.5deg)' },
+    'phone--pos-7': { hidden: 'translateY(48px) rotate(3deg)' },
   };
 
   const phoneObserver = new IntersectionObserver((entries) => {
@@ -88,14 +90,18 @@ document.addEventListener('DOMContentLoaded', () => {
     .phone--pos-1.phone--revealed { opacity: 1 !important; transform: translateY(-16px) rotate(-2.5deg) !important; }
     .phone--pos-2.phone--revealed { opacity: 1 !important; transform: translateY(-56px) rotate(-0.5deg) !important; }
     .phone--pos-3.phone--revealed { opacity: 1 !important; transform: translateY(0px) rotate(0.5deg) !important; }
-    .phone--pos-4.phone--revealed { opacity: 1 !important; transform: translateY(-24px) rotate(0.5deg) !important; }
-    .phone--pos-5.phone--revealed { opacity: 1 !important; transform: translateY(8px) rotate(2.5deg) !important; }
+    .phone--pos-4.phone--revealed { opacity: 1 !important; transform: translateY(-20px) rotate(-0.5deg) !important; }
+    .phone--pos-5.phone--revealed { opacity: 1 !important; transform: translateY(-4px) rotate(0.5deg) !important; }
+    .phone--pos-6.phone--revealed { opacity: 1 !important; transform: translateY(14px) rotate(1.5deg) !important; }
+    .phone--pos-7.phone--revealed { opacity: 1 !important; transform: translateY(-12px) rotate(3deg) !important; }
     @media (max-width: 768px) {
       .phone--pos-1.phone--revealed,
       .phone--pos-2.phone--revealed,
       .phone--pos-3.phone--revealed,
       .phone--pos-4.phone--revealed,
-      .phone--pos-5.phone--revealed { transform: none !important; }
+      .phone--pos-5.phone--revealed,
+      .phone--pos-6.phone--revealed,
+      .phone--pos-7.phone--revealed { transform: none !important; }
     }
   `;
   document.head.appendChild(style);

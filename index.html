@@ -147,7 +147,7 @@
     <div class="container">
       <div class="features__header">
         <p class="label reveal">what it does</p>
-        <h2 class="features__headline reveal reveal-delay-1">what members get.<br>what the studio gains.</h2>
+        <h2 class="features__headline reveal reveal-delay-1">value for members.<br>insight for you.</h2>
       </div>
 
       <div class="bento">
@@ -176,7 +176,7 @@
         <!-- Card B — Voice First (5 cols) -->
         <div class="card bento__card bento__card--5 reveal reveal-delay-1">
           <p class="label bento__label">voice first</p>
-          <h3 class="bento__title">log in 30 seconds</h3>
+          <h3 class="bento__title">check-in in 30 seconds</h3>
           <p class="bento__body">voice notes transcribed and structured automatically. meals, workouts, energy, mood — captured naturally, stored intelligently.</p>
           <div class="waveform">
             <div class="waveform__bar"></div>
@@ -247,7 +247,7 @@
     <div class="container">
       <div class="screens__header">
         <p class="label reveal">the app</p>
-        <h2 class="screens__headline reveal reveal-delay-1">five screens.<br>one experience.</h2>
+        <h2 class="screens__headline reveal reveal-delay-1">minimal interface,<br>meaningful guidance.</h2>
         <p class="screens__sub reveal reveal-delay-2">designed to feel like picking up a well-made journal, not opening a fitness app.</p>
       </div>
     </div>
@@ -275,7 +275,7 @@
             <span class="mini-card__class-time">18:30</span>
             <div>
               <p class="mini-card__title">functional strength</p>
-              <p class="mini-card__sub">coach andré · 4 spots left</p>
+              <p class="mini-card__sub">today · coach andré · 4 spots left</p>
             </div>
           </div>
         </div>
@@ -295,9 +295,9 @@
       <div class="phone phone--pos-2">
         <p class="phone__label">aimara.coach</p>
         <div class="phone-chat-wrapper">
-          <div class="chat-bubble chat-bubble--coach">Good morning, João. I noticed your HRV is slightly lower than your 7-day baseline today. Given your "functional mobility" session tomorrow, I suggest moderate intensity.</div>
-          <div class="chat-bubble chat-bubble--member">Feeling a bit sluggish, actually. The shorter sleep was due to a late work call.</div>
-          <div class="chat-bubble chat-bubble--coach">That makes sense. Let's adjust today's plan — a light walk and some gentle mobility work would be ideal.</div>
+          <div class="chat-bubble chat-bubble--coach">Good morning, João. Your HRV is slightly lower today. I suggest moderate intensity for tomorrow's session.</div>
+          <div class="chat-bubble chat-bubble--member">Feeling sluggish — shorter sleep due to a late work call.</div>
+          <div class="chat-bubble chat-bubble--coach">That makes sense. A light walk and gentle mobility would be ideal today.</div>
           <div class="chat-chips">
             <span class="chat-chip">like this exact</span>
             <span class="chat-chip">suggest a workout</span>
@@ -305,6 +305,9 @@
           </div>
           <div class="chat-input">
             <span class="chat-input__text">Message aimara.coach...</span>
+            <span class="chat-input__mic">
+              <svg viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/></svg>
+            </span>
             <span class="chat-input__send">
               <svg viewBox="0 0 24 24" fill="none"><path d="M22 2L11 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
@@ -313,16 +316,35 @@
         <p class="phone__caption label">coach · chat</p>
       </div>
 
-      <!-- Frame 3 — Voice Check-in -->
+      <!-- Frame 3 — Voice Check-in / Daily Log -->
       <div class="phone phone--pos-3">
         <p class="phone__label">evening check-in</p>
-        <div class="voice-orb"></div>
-        <p class="voice-prompt">tell me about your day</p>
-        <div class="auto-tags">
-          <span class="auto-tag">honest · functional gym</span>
-          <span class="auto-tag">ate well</span>
+        <p class="phone__sublabel">monday · 3 march</p>
+        <div class="voice-rings">
+          <div class="voice-rings__ring voice-rings__ring--outer"></div>
+          <div class="voice-rings__ring voice-rings__ring--mid"></div>
+          <div class="voice-rings__ring voice-rings__ring--inner"></div>
+          <div class="voice-orb">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/></svg>
+          </div>
         </div>
-        <p class="phone__caption label">coach · voice</p>
+        <p class="voice-prompt">"tell me about your day"</p>
+        <div class="voice-dots">
+          <span class="voice-dot"></span>
+          <span class="voice-dot"></span>
+          <span class="voice-dot"></span>
+        </div>
+        <div class="voice-transcript"></div>
+        <p class="voice-parsing">parsing insights...</p>
+        <div class="auto-tags">
+          <span class="auto-tag auto-tag--sage">trained · functional gym</span>
+          <span class="auto-tag auto-tag--sage">ate well</span>
+        </div>
+        <div class="auto-tags">
+          <span class="auto-tag">energy: medium</span>
+          <span class="auto-tag">stress: low</span>
+        </div>
+        <p class="phone__caption label">daily log</p>
       </div>
 
       <!-- Frame 4 — Weekly Plan -->
@@ -407,8 +429,58 @@
         <p class="phone__caption label">weekly plan</p>
       </div>
 
-      <!-- Frame 5 — Workout Detail -->
+      <!-- Frame 5 — Meal Detail -->
       <div class="phone phone--pos-5">
+        <div class="phone__header-row">
+          <p class="phone__label" style="margin-bottom:0">monday · lunch</p>
+        </div>
+        <p class="phone__title" style="font-style:normal; font-size:14px; margin-bottom:8px">grilled salmon & quinoa salad</p>
+        <div class="macro-grid">
+          <div class="macro-card">
+            <span class="macro-card__label">protein</span>
+            <span class="macro-card__val">28g</span>
+          </div>
+          <div class="macro-card">
+            <span class="macro-card__label">carbs</span>
+            <span class="macro-card__val">52g</span>
+          </div>
+          <div class="macro-card">
+            <span class="macro-card__label">fats</span>
+            <span class="macro-card__val">14g</span>
+          </div>
+        </div>
+        <p class="meal-section-title">ingredients & prep</p>
+        <div class="ingredients-card">
+          <div class="ingredient-row">
+            <span class="ingredient-row__name">cooked quinoa</span>
+            <span class="ingredient-row__qty">150g</span>
+          </div>
+          <div class="ingredient-row">
+            <span class="ingredient-row__name">roasted broccolini</span>
+            <span class="ingredient-row__qty">120g</span>
+          </div>
+          <div class="ingredient-row">
+            <span class="ingredient-row__name">extra virgin olive oil</span>
+            <span class="ingredient-row__qty">1 tsp</span>
+          </div>
+          <div class="ingredient-row">
+            <span class="ingredient-row__name">pumpkin seeds</span>
+            <span class="ingredient-row__qty">10g</span>
+          </div>
+        </div>
+        <p class="meal-section-title">alternatives</p>
+        <div class="alt-card">
+          <div>
+            <span class="alt-card__name">buckwheat & kale</span>
+            <span class="alt-card__sub">similar glycemic index</span>
+          </div>
+          <svg class="plan-card__chevron" viewBox="0 0 24 24" width="8" height="8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        </div>
+        <p class="phone__caption label">meal detail</p>
+      </div>
+
+      <!-- Frame 6 — Workout Detail -->
+      <div class="phone phone--pos-6">
         <div class="phone__header-row">
           <p class="phone__label" style="margin-bottom:0">strength & endurance</p>
           <p class="phone__label" style="margin-bottom:0">45 min</p>
@@ -424,7 +496,7 @@
               <span class="workout-exercise__sets">4 Sets</span>
             </div>
             <div class="workout-exercise__grid">
-              <div class="workout-exercise__col"><span class="workout-exercise__val">10 — 15</span><span class="workout-exercise__unit">reps</span></div>
+              <div class="workout-exercise__col"><span class="workout-exercise__val">10–15</span><span class="workout-exercise__unit">reps</span></div>
               <div class="workout-exercise__col"><span class="workout-exercise__val">24</span><span class="workout-exercise__unit">kg</span></div>
               <div class="workout-exercise__col"><span class="workout-exercise__val">90s</span><span class="workout-exercise__unit">rest</span></div>
             </div>
@@ -455,9 +527,56 @@
         <p class="phone__caption label">workout detail</p>
       </div>
 
+      <!-- Frame 7 — Profile -->
+      <div class="phone phone--pos-7">
+        <div class="profile-avatar">
+          <span class="profile-avatar__initials">JS</span>
+        </div>
+        <p class="profile-name">João Silva</p>
+        <p class="profile-meta">aimara.studio member · since 2024</p>
+        <div class="profile-stats">
+          <div class="profile-stat">
+            <span class="profile-stat__val">52.4</span>
+            <span class="profile-stat__label">avg hrv</span>
+          </div>
+          <div class="profile-stat">
+            <span class="profile-stat__val">7:15</span>
+            <span class="profile-stat__label">avg sleep</span>
+          </div>
+          <div class="profile-stat">
+            <span class="profile-stat__val">7.42</span>
+            <span class="profile-stat__label">strain</span>
+          </div>
+        </div>
+        <div class="profile-menu">
+          <div class="profile-menu__item">
+            <span class="profile-menu__text">personal details</span>
+            <svg class="plan-card__chevron" viewBox="0 0 24 24" width="8" height="8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+          </div>
+          <div class="profile-menu__item">
+            <span class="profile-menu__text">biometric vault</span>
+            <svg class="plan-card__chevron" viewBox="0 0 24 24" width="8" height="8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+          </div>
+          <div class="profile-menu__item">
+            <span class="profile-menu__text">app settings</span>
+            <svg class="plan-card__chevron" viewBox="0 0 24 24" width="8" height="8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+          </div>
+        </div>
+        <p class="phone__section-label">integrations</p>
+        <div class="profile-menu__item">
+          <span class="profile-menu__text">whoop</span>
+          <span class="profile-menu__badge">connected</span>
+        </div>
+        <div class="profile-menu__item">
+          <span class="profile-menu__text">apple health</span>
+          <svg class="plan-card__chevron" viewBox="0 0 24 24" width="8" height="8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        </div>
+        <p class="phone__caption label">profile</p>
+      </div>
+
     </div>
 
-    <p class="label screens__caption reveal">react native · iOS & android · invite-only members</p>
+    <p class="label screens__caption reveal">iOS & android · invite-only members</p>
   </section>
 
   <!-- ═══════════════════════════════════════════════════════
