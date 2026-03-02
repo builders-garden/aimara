@@ -552,6 +552,22 @@ img { display: block; max-width: 100%; }
   .bento__card--6 {
     grid-column: span 1;
   }
+
+  .bento__metrics {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .metric-box {
+    min-width: 0;
+    padding: 12px 8px;
+  }
+
+  .metric-box__value {
+    font-size: clamp(22px, 6vw, 28px);
+    line-height: 1.1;
+  }
 }
 
 /* ============================================================
@@ -590,6 +606,10 @@ img { display: block; max-width: 100%; }
   -webkit-overflow-scrolling: touch;
 }
 .phones-composition::-webkit-scrollbar { display: none; }
+
+.phones-scroll-hint {
+  display: none;
+}
 
 /* Staggered positions — arc composition */
 .phone--pos-1 { transform: translateY(-16px) rotate(-2.5deg); }
@@ -1457,6 +1477,70 @@ img { display: block; max-width: 100%; }
   }
   .phone--pos-3 { margin-left: 0; }
   .phone--pos-5 { margin-left: 0; margin-right: 0; }
+
+  .phones-scroll-hint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: fit-content;
+    margin: -14px auto 0;
+    opacity: 0.85;
+  }
+
+  .phones-scroll-hint__label {
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    min-width: 44px;
+    text-align: center;
+  }
+
+  .phones-scroll-hint__arrow {
+    width: 24px;
+    height: 24px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: rgba(255,255,255,0.03);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .phones-scroll-hint__arrow--left { animation: scrollHintLeft 1.4s ease-in-out infinite; }
+  .phones-scroll-hint__arrow--right { animation: scrollHintRight 1.4s ease-in-out infinite; }
+}
+
+@keyframes scrollHintLeft {
+  0% {
+    transform: translateX(0);
+    opacity: 0.55;
+  }
+  50% {
+    transform: translateX(-4px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 0.55;
+  }
+}
+
+@keyframes scrollHintRight {
+  0% {
+    transform: translateX(0);
+    opacity: 0.55;
+  }
+  50% {
+    transform: translateX(4px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 0.55;
+  }
 }
 
 /* ── Selection style ────────────────────────────────────── */
